@@ -1,4 +1,4 @@
 Use this file to record your reflection on this assignment.
 
-- What are your initial impressions of how `Inheritance` affects your programming?
-- What worked, what didn't, what advice would you give someone taking this course in the future?
+- What are your initial impressions of how `Inheritance` affects your programming? I perceived inheritance as very important in coding, especially in OOP because it helps us code programs more clearly and more organized. We do not have to rewrite parts of the program unless these are needed to be modified.
+- What worked, what didn't, what advice would you give someone taking this course in the future? I did not have a hard time doing this assignment because I read through the README file very carefully. I also looked back on lecture notes to recall the main ideas about Inheritance. I would say these really helped me a lot throughout coding this assignment so these will be my advices to the students taking this class: Read carefully the instructions and look back on lecture notes. 
