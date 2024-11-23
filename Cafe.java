@@ -34,12 +34,11 @@ public class Cafe extends Building{
     public void sellCoffee(int numCoffeeOunces, int nSugarPackets, int nCreams){
         if(nCoffeeOunces - numCoffeeOunces <= 0 || this.nSugarPackets - nSugarPackets <= 0 || this.nCreams - nCreams <= 0) {
             throw new RuntimeException("No more remaining");
-        }
-        else {
-            nCoffeeOunces-=numCoffeeOunces;
+        }else {
+            this.nCoffeeOunces-=numCoffeeOunces;
             this.nSugarPackets-=nSugarPackets;
             this.nCreams-=nCreams;
-            this.nCups=this.nCups-1;
+            this.nCups-=1;
         }
     }
 
@@ -58,7 +57,7 @@ public class Cafe extends Building{
     }
 
     public static void main(String[] args){
-        Cafe CC = new Cafe("Compass Cafe in Neilson Library", "7 Neilson Drive, Northampton, MA 01063", 1, 10, 30, 40, 2);
-        CC.restock(100, 100, 500, 1000);
+        Cafe compassCafe = new Cafe("Compass Cafe in Neilson Library", "7 Neilson Drive, Northampton, MA 01063", 1, 10, 30, 40, 2);
+        compassCafe.restock(100, 100, 500, 1000);
     }
 }

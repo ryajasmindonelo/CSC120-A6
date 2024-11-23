@@ -13,7 +13,7 @@ public class House extends Building{
    */
   public House(String name, String address, int floor, boolean hasDining){
     super(name, address, floor);
-    residents = new ArrayList<>();
+    this.residents = new ArrayList<>();
     this.hasDiningRoom = hasDining;
     System.out.println("You have built a house: 🏠");
   }
@@ -41,8 +41,7 @@ public class House extends Building{
   public void moveIn(String name){
     if (residents.contains(name)){
       throw new RuntimeException(name + " is a resident of this house.");
-    }
-    else{
+    }else{
       this.residents.add(name);
     }
   }
@@ -55,8 +54,7 @@ public class House extends Building{
   public String moveOut(String name){
     if (!residents.contains(name)){
       throw new RuntimeException(name + " is not a resident of this house.");
-    }
-    else{
+    }else{
       this.residents.remove(name);
       return name;
     }
@@ -70,8 +68,7 @@ public class House extends Building{
   public boolean isResident(String person){
     if(residents.contains(name)){
       return true;
-    }
-    else{
+    }else{
       return false;
     }
   }

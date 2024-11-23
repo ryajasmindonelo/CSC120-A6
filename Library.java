@@ -22,8 +22,7 @@ public class Library extends Building{
     public void addTitle(String title){
       if (this.collection.containsKey(title)){
         throw new RuntimeException("Unable to find in the collection");
-      }
-      else{
+      }else{
         this.collection.put(title, true);
       }
     }
@@ -48,8 +47,7 @@ public class Library extends Building{
     public void checkOut(String title){
       if (!this.collection.get(title)){
         throw new RuntimeException("Unable to check out");
-      }
-      else {
+      }else{
         this.collection.replace(title, false);
       }
     }
@@ -59,10 +57,11 @@ public class Library extends Building{
      * @param title String name of book and author
      */
     public void returnBook(String title){
+      Library NeilsonLibrary = new Library("Neilson Library", "7 Neilson Drive, Northampton, MA 01063", 5);
+      NeilsonLibrary.removeTitle("Book Lovers by Emily Henry");
       if (this.collection.containsKey(title)){
         throw new RuntimeException("Found in the system");
-      }
-      else{
+      }else{
         this.collection.replace(title, true);
       }
     }
@@ -90,8 +89,6 @@ public class Library extends Building{
      */
     public void printCollection(){
       System.out.println(this.collection.toString());
-
-      
     }
 
     public static void main(String[] args){
